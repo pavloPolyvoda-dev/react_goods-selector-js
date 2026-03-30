@@ -43,7 +43,11 @@ export const App = () => {
           {goods.map(good => {
             if (good === selectedGood)
               return (
-                <tr data-cy="Good" className="has-background-success-light">
+                <tr
+                  key={good}
+                  data-cy="Good"
+                  className="has-background-success-light"
+                >
                   <td>
                     <button
                       data-cy="RemoveButton"
@@ -64,7 +68,7 @@ export const App = () => {
               );
 
             return (
-              <tr data-cy="Good">
+              <tr key={good} data-cy="Good">
                 <td>
                   <button
                     data-cy="AddButton"
